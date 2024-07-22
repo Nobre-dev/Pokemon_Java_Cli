@@ -4,4 +4,7 @@ public class Methods {
             System.out.println();
         }
     }
+    void Tutorial() {
+        System.out.println("Em desenvolvimento");
+    }
 }
