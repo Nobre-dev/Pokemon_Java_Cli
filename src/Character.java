@@ -1,5 +1,7 @@
 public class Character {
 
+    //Player
+
     String Name;
     int hp;
     int Level;
@@ -16,5 +18,6 @@ public class Character {
     }
     void Atk(){}
     void Run(){}
+
 
 }

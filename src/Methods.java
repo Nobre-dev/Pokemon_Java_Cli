@@ -1,16 +1,18 @@
 public class Methods {
-    static void clean() {
+    static void Clean() {
         for (int i = 0; i < 100; i++) {
             System.out.println();
         }
     }
-    static void Bar(int hp, int level, int strength, int defence){
+
+    static void StatusBar(int hp, int level, int strength, int defence){
         System.out.printf(" [HP] : %d |", hp);
         System.out.printf(" [LV] : %d |", level);
         System.out.printf(" [ATQ] : %d |", strength);
         System.out.printf(" [DEF] : %d ", defence);
     }
-    static void pause(int time){
+
+    static void Pause(int time){
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -18,13 +20,12 @@ public class Methods {
         }
     }
 
-
-    static void Tutorial(Character player) {
-        Methods.clean();
+    static void Tutorial(Character player){
+        Methods.Clean();
         System.out.println("       | INTERFACE |     ");
-        Methods.pause(1000);
+        Methods.Pause(1000);
         System.out.println("Primeiro vamos ver como seria a interface de status\n\n");
-        Methods.pause(2000);
+        Methods.Pause(2000);
         System.out.println("\n A barra de status contem 4 elementos: ");
         System.out.printf("""
 
@@ -33,7 +34,23 @@ public class Methods {
                 Força: O quanto de dano o player dá, aumenta com os level e itens(TODO) neste momento o player tira %d de danos aos inimigos
                 Defença: O quanto o player retira do ataque, exemplo se tiveres uma defença de 10 pontos e tomares 15 pontos de danos, 10 pontos são retirados
                 """, player.hp, player.Level,player.Strength);
-        System.out.println("É assim que seria:");
-        Methods.Bar(player.hp, player.Level, player.Strength, player.defence);
+        System.out.println("É assim que seria:\n");
+        Methods.StatusBar(player.hp, player.Level, player.Strength, player.defence);
+        Methods.Pause(2000);
+        System.out.println("Agora que já sabemos quais são e como funcionam os status vamos ver a action bar!!");
+
+    }
+
+    static void EnemyBar(int hp, int level){
+        System.out.printf(" [HP] : %d |", hp);
+        System.out.printf(" [LV] : %d |", level);
+    }
+
+    static void Battle(Character player, Enemy Enemy){
+
+    }
+
+    static void ActionBar(Character player){
+        
     }
 }
