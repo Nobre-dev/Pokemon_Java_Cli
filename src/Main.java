@@ -14,8 +14,6 @@ public class Main {
         //Criar o personagem
         Character player = new Character(playername,0,0,1,100);
 
-
-
         Method.clean();
         System.out.printf("Você quer fazer o tutorial?\n [Y] Sim, [N] Não\n");
         Scanner scanner2 = new Scanner(System.in);
