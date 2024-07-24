@@ -37,7 +37,22 @@ public class Methods {
         System.out.println("É assim que seria:\n");
         Methods.StatusBar(player.hp, player.Level, player.Strength, player.defence);
         Methods.Pause(2000);
-        System.out.println("Agora que já sabemos quais são e como funcionam os status vamos ver a action bar!!");
+        System.out.println("\nAgora que já sabemos quais são e como funcionam os status vamos ver a action bar!!");
+        Methods.Clean();
+        Methods.Pause(1000);
+        System.out.println("""
+                A action bar é basicamente o que o player pode fazer, a action bar muda dependendo do que o player está fazendo
+                Por agora irei mostrar a actionbar de luta
+                """);
+        Methods.ActionBar();
+        System.out.println("""
+                Ela contem 4 ações:
+                
+                Attack: Ataca o enimigo
+                Talk: Tentas conversar com o enimigo
+                Itens: -- N feitos --
+                Quit: Nome autoexplicativo
+                """);
 
     }
 
@@ -50,7 +65,11 @@ public class Methods {
 
     }
 
-    static void ActionBar(Character player){
-        
+    static void ActionBar(){
+        System.out.println("""
+               --------------------------------------------
+               | [] Attack | [] Talk | [] Items | [] Quit |
+               -------------------------------------------- 
+                """);
     }
 }
